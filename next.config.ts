@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/about',
+        source: '/:path*',
         headers: [
           {
             key: 'Strict-Transport-Security',
