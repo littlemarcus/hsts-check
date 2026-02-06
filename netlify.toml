@@ -4,6 +4,14 @@
   functions = "netlify/functions"
   publish = ".next"
 
+  [[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = '''
+    max-age=63072000;
+    includeSubDomains;
+    preload'''
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
