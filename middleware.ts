@@ -6,12 +6,5 @@ export function middleware(request: NextRequest) {
       headers: new Headers(request.headers),
     },
   });
-
-  // 30 seconds
-  response.headers.set(
-    'Strict-Transport-Security',
-    'max-age=30; includeSubDomains; preload',
-  );
-
   return response;
 }
